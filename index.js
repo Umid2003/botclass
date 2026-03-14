@@ -446,13 +446,14 @@ bot.on('message', (msg) => {
 //             bot.sendMessage(id, 'https://www.w3schools.com/css/default.asp')
 //         }
 // })
-let lesson=""
+let lesson=""     
+
 bot.on('callback_query',msg=>{
         const id = msg.message.chat.id
         let data = msg.data
         if(data==='asos'){
             bot.sendMessage(id,"Kursni tanlang",beginnerOptions)
-        }
+        } 
         if(data==='html'){
             lesson='html'
             bot.sendMessage(id,"Choose Option", chooseOptions)
